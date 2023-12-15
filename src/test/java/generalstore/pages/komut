@@ -1,0 +1,53 @@
+appium --allow-insecure chromedriver_autodownload
+
+
+->uiautomator yuklemek icin
+appium driver list
+appium driver list --installed
+appium driver list --updates
+appium driver install uiautomator2
+appium driver update uiautomator2
+
+
+
+
+npm install -g appium
+npm update -g appium(yeni çıkan gücellemeleri Yükleme)
+npm uninstall -g appium(appium kaldırma)
+where appium
+appium
+appium driver list
+appium driver list --installed
+appium driver list --updates
+appium driver install uiautomator2
+appium driver update uiautomator2
+
+
+
+
+adb shell dumpsys window | find "mCurrentFocus"
+
+
+
+Appium mobil uygulamalarin otomasyonunu saglayan acik kaynakli bir tool dur.
+Farkli turdeki uygulama turlerini bircok farkli programlama dilini kullanarak farkli platformlarda appium ile otomatize edebiliriz.
+Capraz platform yetenegi sayesinde bir kez yazilan kodlari tum platformlarda kullanabiliriz.
+
+Mobil Uygulama Turleri
+-Native --> Ios ve play stora kullanarak indirdigimiz uygulamalardir
+-Web App --> Farkli tarayicilari kullanarak calistirdigimiz uygulamalardir
+-Hybrid -->Hem native hem hybrid uygulamalardir.Iki turlu de kullanilabilir.
+
+Kurulum Sinirliliklari
+Ios'a hem ios hem android cihazlarini kurabilirken windows da sadece android cihazlari kurup test edebiliriz
+
+
+
+
+@Override
+public void onTestStart(ITestResult result) {
+    String testName = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(Test.class).testName();
+    String testDescription = result.getMethod().getDescription();
+    RaporlamaUtil.extentTestOlustur(testName, testDescription);
+    RaporlamaUtil.extentTestInfo("Test başladı.");
+}
